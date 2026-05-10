@@ -16,7 +16,7 @@ short_description: Plain-English Q&A on Indian GST, grounded in CBIC documents
 
 > Plain-English Q&A on Indian GST, grounded in official CBIC documents. Built as a portfolio project to demonstrate practical RAG engineering.
 
-[![Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://huggingface.co/spaces/pranshu2302/askgst)
+[![Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://huggingface.co/spaces/pranshusinghal123/askgst)
 [![Eval](https://img.shields.io/badge/recall%405-72%25-blue)](docs/findings.md)
 [![Python](https://img.shields.io/badge/python-3.11-blue)]()
 
@@ -43,11 +43,9 @@ AskGST answers GST questions in plain English, with citations to specific pages 
 
 ## Demo
 
-🚧 *Live demo deploying to Hugging Face Spaces. Link goes here once deployment is complete.*
+🚀 **[Try it live →](https://huggingface.co/spaces/pranshusinghal123/askgst)**
 
-In the meantime, the screenshot above shows the actual UI with a real GST query and source citations.
-
----
+Free CPU tier — first query has a ~30 second cold start while models warm up; subsequent queries are fast.
 
 ## Architecture
 
