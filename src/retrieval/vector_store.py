@@ -1,4 +1,4 @@
-c"""
+"""
 Loads chunks.json, generates 384-dim embeddings for each chunk, and uploads to Qdrant.
 """
 import json
