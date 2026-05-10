@@ -21,10 +21,14 @@ import time
 
 from sentence_transformers import SentenceTransformer
 from qdrant_client import QdrantClient
+from dotenv import load_dotenv
 
 from src.retrieval.bm25_store import BM25Store
 from src.retrieval.hybrid import HybridRetriever
 from src.retrieval.reranker import Reranker
+from src.retrieval.qdrant_factory import get_qdrant_client
+
+load_dotenv()
 
 # --- Constants ---
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -123,7 +127,7 @@ def main():
     print("\nInitializing components...")
     t0 = time.time()
     model = SentenceTransformer(MODEL_NAME)
-    qdrant_client = QdrantClient(host="localhost", port=6333)
+    qdrant_client = get_qdrant_client()
     bm25_store = BM25Store(str(CHUNKS_PATH))
     reranker = Reranker()
     hybrid_no_rerank = HybridRetriever(bm25_store, model, qdrant_client)

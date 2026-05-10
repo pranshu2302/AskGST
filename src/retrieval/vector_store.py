@@ -2,10 +2,18 @@
 Loads chunks.json, generates 384-dim embeddings for each chunk, and uploads to Qdrant.
 """
 import json
+import sys
 from pathlib import Path
 from sentence_transformers import SentenceTransformer
 from qdrant_client import QdrantClient
 from qdrant_client.models import VectorParams, Distance, PointStruct
+from dotenv import load_dotenv
+
+# Make `src.*` imports work when running this file directly
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from src.retrieval.qdrant_factory import get_qdrant_client
+
+load_dotenv()
 
 BATCH_SIZE = 64
 CHUNKS_PATH = Path("data/processed/chunks.json")
@@ -26,12 +34,20 @@ def main():
     print("Model ready.")
 
     print("Connecting to Qdrant...")
-    client = QdrantClient(host=QDRANT_HOST, port=QDRANT_PORT)
+    client = get_qdrant_client()
 
-    print(f"Recreating collection '{COLLECTION_NAME}'...")
-    client.recreate_collection(
+    # Create the collection on cloud (delete first if it exists; ignore "not found")
+    print(f"Creating collection '{COLLECTION_NAME}' on cloud...")
+    try:
+        cloud.delete_collection(COLLECTION_NAME)
+        print("  (deleted existing cloud collection)")
+    except UnexpectedResponse as e:
+        # 404 = collection didn't exist yet; anything else is a real problem
+        if e.status_code != 404:
+            raise
+    cloud.create_collection(
         collection_name=COLLECTION_NAME,
-        vectors_config=VectorParams(size=384, distance=Distance.COSINE)
+        vectors_config=VectorParams(size=384, distance=Distance.COSINE),
     )
 
     # Note: BGE recommends a query prefix at search time, not for indexing.

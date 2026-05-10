@@ -10,13 +10,12 @@ from src.llm.client import get_llm
 from src.llm.prompts import SYSTEM_PROMPT, USER_PROMPT_TEMPLATE
 from src.retrieval.bm25_store import BM25Store
 from src.retrieval.hybrid import HybridRetriever
+from src.retrieval.qdrant_factory import get_qdrant_client
 
 
 COLLECTION_NAME = "askgst_chunks"
 MODEL_NAME = "BAAI/bge-small-en-v1.5"
 QUERY_PREFIX = "Represent this sentence for searching relevant passages: "
-QDRANT_HOST = "localhost"
-QDRANT_PORT = 6333
 TOP_K = 5
 CHUNKS_PATH = "data/processed/chunks.json"
 
@@ -35,7 +34,7 @@ def _get_components():
         print("Loading BGE model...")
         _model = SentenceTransformer(MODEL_NAME)
     if _client is None:
-        _client = QdrantClient(host=QDRANT_HOST, port=QDRANT_PORT)
+        _client = get_qdrant_client()
     if _llm is None:
         _llm = get_llm()
     if _retriever is None:

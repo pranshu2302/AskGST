@@ -141,5 +141,5 @@ st.markdown("---")
 st.caption(
     "AskGST is a RAG-based Q&A demo over official Indian GST documents. "
     "Not a substitute for professional tax advice. "
-    "[GitHub](https://github.com/[your-username]/askgst)"
+    "[GitHub](https://github.com/pranshu2302/AskGST)"
 )

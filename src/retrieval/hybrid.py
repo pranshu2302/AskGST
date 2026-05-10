@@ -6,6 +6,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from src.retrieval.bm25_store import BM25Store
+from src.retrieval.qdrant_factory import get_qdrant_client
 
 QUERY_PREFIX = "Represent this sentence for searching relevant passages: "
 COLLECTION_NAME = "askgst_chunks"
@@ -85,13 +86,15 @@ class HybridRetriever:
 
 if __name__ == "__main__":
     from sentence_transformers import SentenceTransformer
-    from qdrant_client import QdrantClient
+    from dotenv import load_dotenv
     from src.retrieval.reranker import Reranker
+
+    load_dotenv()
 
     print("Initializing components...")
     bm25 = BM25Store("data/processed/chunks.json")
     model = SentenceTransformer("BAAI/bge-small-en-v1.5")
-    client = QdrantClient(host="localhost", port=6333)
+    client = get_qdrant_client()
     reranker = Reranker()
 
     # Two retrievers — one with reranker, one without

@@ -1,8 +1,17 @@
 """
 Test retrieval: embed queries, search Qdrant, print top 5 results per query.
 """
+import sys
+from pathlib import Path
 from sentence_transformers import SentenceTransformer
 from qdrant_client import QdrantClient
+from dotenv import load_dotenv
+
+# Make `src.*` imports work when running this file directly
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from src.retrieval.qdrant_factory import get_qdrant_client
+
+load_dotenv()
 
 COLLECTION_NAME = "askgst_chunks"
 MODEL_NAME = "BAAI/bge-small-en-v1.5"
@@ -23,7 +32,7 @@ def main():
     model = SentenceTransformer(MODEL_NAME)
     print("Model loaded.")
     print("Connecting to Qdrant...")
-    client = QdrantClient(host="localhost", port=6333)
+    client = get_qdrant_client()
     print("Connected.")
 
     for query in QUERIES:
