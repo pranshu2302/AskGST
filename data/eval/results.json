@@ -1,0 +1,1560 @@
+{
+  "summary": {
+    "total_queries": 30,
+    "queries_with_gold": 25,
+    "metrics_per_config": {
+      "vector_only": {
+        "recall_at_5": 0.56,
+        "passed": 14,
+        "total_with_gold": 25
+      },
+      "bm25_only": {
+        "recall_at_5": 0.48,
+        "passed": 12,
+        "total_with_gold": 25
+      },
+      "hybrid": {
+        "recall_at_5": 0.72,
+        "passed": 18,
+        "total_with_gold": 25
+      },
+      "hybrid_rerank": {
+        "recall_at_5": 0.64,
+        "passed": 16,
+        "total_with_gold": 25
+      }
+    }
+  },
+  "per_query_results": [
+    {
+      "query_id": "q1",
+      "query": "Can I claim ITC on rent-a-cab services?",
+      "gold_chunk_ids": [
+        "sectoral_faq_cat15_q16",
+        "sectoral_faq_cat21_q3"
+      ],
+      "category": "itc",
+      "phrasing_style": "direct",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat22_q75",
+            "cbic_faqs_v1_p87_c2",
+            "cbic_faqs_v1_p87_c1",
+            "cbic_faqs_v2_p87_c1",
+            "sectoral_faq_cat15_q9"
+          ],
+          "passed": false
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat21_q3",
+            "sectoral_faq_cat15_q16",
+            "sectoral_faq_cat22_q75",
+            "cbic_faqs_v2_p87_c1",
+            "cbic_faqs_v2_p46_c0"
+          ],
+          "passed": true
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "sectoral_faq_cat22_q75",
+            "sectoral_faq_cat21_q3",
+            "cbic_faqs_v2_p87_c1",
+            "sectoral_faq_cat15_q16",
+            "cbic_faqs_v1_p87_c1"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "sectoral_faq_cat22_q75",
+            "cbic_faqs_v2_p46_c0",
+            "cbic_faqs_v1_p46_c0",
+            "cbic_faqs_v1_p87_c1",
+            "cbic_faqs_v2_p87_c1"
+          ],
+          "passed": false
+        }
+      }
+    },
+    {
+      "query_id": "q2",
+      "query": "I just started a small consultancy. My yearly income is about 12 lakhs. Do I need GST?",
+      "gold_chunk_ids": [
+        "gst_overview_2019_p12_c0",
+        "cbic_faqs_v1_p29_c1"
+      ],
+      "category": "registration",
+      "phrasing_style": "scenario",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat18_q7",
+            "sectoral_faq_cat18_q2",
+            "sectoral_faq_cat17_q6",
+            "sectoral_faq_cat18_q9",
+            "sectoral_faq_cat18_q10"
+          ],
+          "passed": false
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat18_q10",
+            "sectoral_faq_cat17_q6",
+            "sectoral_faq_cat18_q9",
+            "cbic_faqs_v1_p14_c0",
+            "cgst_rules_2017_part_b_p333_c2"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "sectoral_faq_cat17_q6",
+            "sectoral_faq_cat18_q10",
+            "sectoral_faq_cat18_q9",
+            "sectoral_faq_cat18_q4",
+            "cbic_faqs_v2_p14_c0"
+          ],
+          "passed": false
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "sectoral_faq_cat22_q28",
+            "sectoral_faq_cat18_q7",
+            "sectoral_faq_cat17_q6",
+            "sectoral_faq_cat18_q2",
+            "sectoral_faq_cat18_q10"
+          ],
+          "passed": false
+        }
+      }
+    },
+    {
+      "query_id": "q3",
+      "query": "What are the GST rates under the composition scheme for traders, manufacturers, and restaurants?",
+      "gold_chunk_ids": [
+        "cbic_faqs_v1_p24_c1",
+        "cbic_faqs_v1_p16_c0"
+      ],
+      "category": "composition",
+      "phrasing_style": "direct",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "gst_overview_2019_p14_c1",
+            "cbic_faqs_v2_p15_c1",
+            "cbic_faqs_v1_p16_c0",
+            "cgst_rules_2017_part_b_p8_c0",
+            "cbic_faqs_v1_p15_c1"
+          ],
+          "passed": true
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "gst_overview_2019_p14_c0",
+            "cbic_faqs_v2_p24_c1",
+            "cbic_faqs_v1_p24_c1",
+            "cbic_faqs_v1_p25_c1",
+            "cbic_faqs_v2_p25_c1"
+          ],
+          "passed": true
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "cgst_rules_2017_part_b_p8_c0",
+            "cbic_faqs_v1_p24_c1",
+            "cbic_faqs_v2_p24_c1",
+            "cbic_faqs_v2_p27_c0",
+            "gst_overview_2019_p14_c0"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "gst_overview_2019_p14_c0",
+            "cbic_faqs_v2_p24_c1",
+            "cbic_faqs_v1_p24_c1",
+            "gst_overview_2019_p14_c1",
+            "cbic_faqs_v1_p16_c0"
+          ],
+          "passed": true
+        }
+      }
+    },
+    {
+      "query_id": "q4",
+      "query": "What is the threshold for opting into the composition scheme?",
+      "gold_chunk_ids": [
+        "cbic_faqs_v1_p24_c1",
+        "cbic_faqs_v1_p14_c1"
+      ],
+      "category": "composition",
+      "phrasing_style": "direct",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "cbic_faqs_v1_p24_c1",
+            "cbic_faqs_v2_p24_c1",
+            "cbic_faqs_v1_p25_c0",
+            "cbic_faqs_v2_p25_c0",
+            "cgst_rules_2017_part_b_p19_c0"
+          ],
+          "passed": true
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p24_c1",
+            "cbic_faqs_v1_p24_c1",
+            "gst_overview_2019_p14_c0",
+            "sectoral_faq_cat15_q5",
+            "cbic_faqs_v2_p16_c0"
+          ],
+          "passed": true
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "cbic_faqs_v1_p24_c1",
+            "cbic_faqs_v2_p24_c1",
+            "cgst_rules_2017_part_b_p19_c0",
+            "cbic_faqs_v1_p174_c1",
+            "cbic_faqs_v2_p174_c1"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p24_c1",
+            "cbic_faqs_v1_p24_c1",
+            "gst_overview_2019_p33_c0",
+            "gst_overview_2019_p14_c0",
+            "cbic_faqs_v1_p174_c1"
+          ],
+          "passed": true
+        }
+      }
+    },
+    {
+      "query_id": "q5",
+      "query": "What does reverse charge mean under GST?",
+      "gold_chunk_ids": [
+        "sectoral_faq_cat9_q1",
+        "sectoral_faq_cat9_q2"
+      ],
+      "category": "rcm",
+      "phrasing_style": "direct",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p23_c1",
+            "cbic_faqs_v1_p23_c1",
+            "sectoral_faq_cat9_q2",
+            "sectoral_faq_cat9_q1",
+            "sectoral_faq_cat9_q7"
+          ],
+          "passed": true
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "cbic_faqs_v1_p84_c0",
+            "cbic_faqs_v2_p84_c0",
+            "cbic_faqs_v2_p23_c1",
+            "cbic_faqs_v1_p23_c1",
+            "cbic_faqs_v1_p56_c0"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "cbic_faqs_v1_p23_c1",
+            "cbic_faqs_v2_p23_c1",
+            "sectoral_faq_cat9_q7",
+            "sectoral_faq_cat9_q2",
+            "sectoral_faq_cat9_q4"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "cbic_faqs_v1_p23_c1",
+            "cbic_faqs_v2_p23_c1",
+            "sectoral_faq_cat9_q1",
+            "sectoral_faq_cat9_q2",
+            "sectoral_faq_cat9_q4"
+          ],
+          "passed": true
+        }
+      }
+    },
+    {
+      "query_id": "q6",
+      "query": "Are legal services from an advocate firm under reverse charge?",
+      "gold_chunk_ids": [
+        "sectoral_faq_cat9_q12"
+      ],
+      "category": "rcm",
+      "phrasing_style": "direct",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q12",
+            "sectoral_faq_cat9_q13",
+            "sectoral_faq_cat9_q2",
+            "cbic_faqs_v1_p23_c1",
+            "cbic_faqs_v2_p23_c1"
+          ],
+          "passed": true
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q12",
+            "services_under_rcm_p2_c0",
+            "gst_rate_schedule_services_p7_c0",
+            "services_under_rcm_p2_c1",
+            "sectoral_faq_cat9_q13"
+          ],
+          "passed": true
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q12",
+            "sectoral_faq_cat9_q13",
+            "services_under_rcm_p2_c0",
+            "sectoral_faq_cat9_q23",
+            "sectoral_faq_cat9_q2"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q12",
+            "services_under_rcm_p2_c0",
+            "sectoral_faq_cat9_q13",
+            "sectoral_faq_cat9_q23",
+            "sectoral_faq_cat9_q2"
+          ],
+          "passed": true
+        }
+      }
+    },
+    {
+      "query_id": "q7",
+      "query": "If I'm paying GST on reverse charge, can I claim it as input tax credit?",
+      "gold_chunk_ids": [
+        "sectoral_faq_cat9_q7"
+      ],
+      "category": "rcm",
+      "phrasing_style": "casual",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q19",
+            "sectoral_faq_cat9_q7",
+            "cbic_faqs_v1_p84_c0",
+            "cbic_faqs_v2_p84_c0",
+            "sectoral_faq_cat15_q7"
+          ],
+          "passed": true
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q19",
+            "sectoral_faq_cat9_q7",
+            "cbic_faqs_v1_p14_c2",
+            "cbic_faqs_v2_p84_c0",
+            "cbic_faqs_v1_p84_c0"
+          ],
+          "passed": true
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q19",
+            "sectoral_faq_cat9_q7",
+            "cbic_faqs_v2_p84_c0",
+            "cbic_faqs_v1_p84_c0",
+            "sectoral_faq_cat9_q23"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q19",
+            "sectoral_faq_cat9_q7",
+            "sectoral_faq_cat9_q8",
+            "cbic_faqs_v2_p84_c0",
+            "cbic_faqs_v1_p84_c0"
+          ],
+          "passed": true
+        }
+      }
+    },
+    {
+      "query_id": "q8",
+      "query": "Does the 20 lakh threshold apply to me if I have to pay tax under reverse charge?",
+      "gold_chunk_ids": [
+        "sectoral_faq_cat9_q4"
+      ],
+      "category": "rcm",
+      "phrasing_style": "paraphrase",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q4",
+            "cbic_faqs_v2_p13_c2",
+            "cbic_faqs_v1_p14_c2",
+            "sectoral_faq_cat9_q17",
+            "sectoral_faq_cat9_q23"
+          ],
+          "passed": true
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q4",
+            "cbic_faqs_v1_p215_c1",
+            "cbic_faqs_v2_p215_c1",
+            "sectoral_faq_cat9_q14",
+            "sectoral_faq_cat18_q4"
+          ],
+          "passed": true
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q4",
+            "cbic_faqs_v1_p14_c2",
+            "cbic_faqs_v2_p13_c2",
+            "cbic_faqs_v1_p215_c1",
+            "cbic_faqs_v2_p215_c1"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q4",
+            "cbic_faqs_v2_p13_c2",
+            "sectoral_faq_cat18_q4",
+            "cbic_faqs_v1_p14_c2",
+            "cbic_faqs_v2_p215_c1"
+          ],
+          "passed": true
+        }
+      }
+    },
+    {
+      "query_id": "q9",
+      "query": "I run a small shop with 15 lakh turnover and want to start selling on Amazon. Do I need GST registration?",
+      "gold_chunk_ids": [
+        "sectoral_faq_cat18_q7",
+        "sectoral_faq_cat18_q1"
+      ],
+      "category": "registration",
+      "phrasing_style": "scenario",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat18_q7",
+            "sectoral_faq_cat18_q9",
+            "cbic_faqs_v2_p215_c1",
+            "sectoral_faq_cat18_q11",
+            "cbic_faqs_v1_p215_c1"
+          ],
+          "passed": true
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat18_q7",
+            "sectoral_faq_cat18_q1",
+            "gst_rate_schedule_services_p6_c2",
+            "sectoral_faq_cat18_q10",
+            "sectoral_faq_cat18_q9"
+          ],
+          "passed": true
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "sectoral_faq_cat18_q7",
+            "sectoral_faq_cat18_q9",
+            "sectoral_faq_cat18_q1",
+            "sectoral_faq_cat18_q10",
+            "sectoral_faq_cat18_q12"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "sectoral_faq_cat18_q7",
+            "sectoral_faq_cat18_q9",
+            "sectoral_faq_cat18_q1",
+            "sectoral_faq_cat18_q4",
+            "sectoral_faq_cat18_q11"
+          ],
+          "passed": true
+        }
+      }
+    },
+    {
+      "query_id": "q10",
+      "query": "What is aggregate turnover and what does it include?",
+      "gold_chunk_ids": [
+        "cbic_faqs_v1_p30_c0"
+      ],
+      "category": "registration",
+      "phrasing_style": "direct",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q11",
+            "cgst_act_2017_p30_c0",
+            "cbic_faqs_v2_p95_c1",
+            "cbic_faqs_v1_p95_c1",
+            "cgst_rules_2017_part_a_p101_c4"
+          ],
+          "passed": false
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q11",
+            "cbic_faqs_v2_p95_c1",
+            "cbic_faqs_v1_p95_c1",
+            "cbic_faqs_v2_p30_c0",
+            "cbic_faqs_v1_p30_c0"
+          ],
+          "passed": true
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q11",
+            "cbic_faqs_v2_p95_c1",
+            "cbic_faqs_v1_p95_c1",
+            "cbic_faqs_v2_p30_c0",
+            "cgst_act_2017_p30_c0"
+          ],
+          "passed": false
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q11",
+            "cbic_faqs_v2_p30_c0",
+            "cbic_faqs_v1_p30_c0",
+            "cgst_rules_2017_part_b_p204_c0",
+            "cgst_act_2017_p30_c0"
+          ],
+          "passed": true
+        }
+      }
+    },
+    {
+      "query_id": "q11",
+      "query": "Who has to compulsorily register under GST regardless of turnover?",
+      "gold_chunk_ids": [
+        "cgst_act_2017_p51_c2"
+      ],
+      "category": "registration",
+      "phrasing_style": "direct",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p215_c1",
+            "sectoral_faq_cat18_q5",
+            "cbic_faqs_v1_p29_c2",
+            "cbic_faqs_v2_p29_c2",
+            "cbic_faqs_v1_p215_c1"
+          ],
+          "passed": false
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q4",
+            "sectoral_faq_cat9_q14",
+            "sectoral_faq_cat18_q7",
+            "cbic_faqs_v2_p30_c1",
+            "cbic_faqs_v1_p30_c1"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "sectoral_faq_cat18_q7",
+            "cbic_faqs_v2_p40_c1",
+            "cbic_faqs_v2_p215_c1",
+            "cbic_faqs_v1_p40_c1",
+            "cbic_faqs_v1_p215_c1"
+          ],
+          "passed": false
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q14",
+            "sectoral_faq_cat9_q4",
+            "cbic_faqs_v2_p30_c1",
+            "cbic_faqs_v1_p30_c1",
+            "cbic_faqs_v2_p215_c1"
+          ],
+          "passed": false
+        }
+      }
+    },
+    {
+      "query_id": "q12",
+      "query": "What's the time of supply for goods when tax is paid under reverse charge?",
+      "gold_chunk_ids": [
+        "sectoral_faq_cat9_q5"
+      ],
+      "category": "rcm",
+      "phrasing_style": "direct",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q5",
+            "cgst_act_2017_p32_c2",
+            "sectoral_faq_cat9_q6",
+            "cbic_faqs_v2_p56_c1",
+            "cbic_faqs_v1_p56_c1"
+          ],
+          "passed": true
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "cbic_faqs_v1_p55_c0",
+            "cbic_faqs_v2_p55_c0",
+            "cbic_faqs_v1_p56_c0",
+            "cbic_faqs_v2_p56_c0",
+            "cgst_act_2017_p32_c2"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "cgst_act_2017_p32_c2",
+            "sectoral_faq_cat9_q5",
+            "sectoral_faq_cat9_q6",
+            "cbic_faqs_v1_p56_c0",
+            "cbic_faqs_v2_p56_c0"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q5",
+            "sectoral_faq_cat9_q6",
+            "cbic_faqs_v1_p56_c1",
+            "cbic_faqs_v2_p56_c1",
+            "cbic_faqs_v1_p56_c0"
+          ],
+          "passed": true
+        }
+      }
+    },
+    {
+      "query_id": "q13",
+      "query": "Can I take input tax credit on motor vehicles for my business?",
+      "gold_chunk_ids": [
+        "cgst_act_2017_p42_c0",
+        "cgst_act_2017_p42_c1"
+      ],
+      "category": "itc",
+      "phrasing_style": "casual",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "cbic_faqs_v1_p87_c0",
+            "cbic_faqs_v2_p89_c1",
+            "sectoral_faq_cat21_q3",
+            "sectoral_faq_cat15_q16",
+            "cgst_act_2017_p39_c0"
+          ],
+          "passed": false
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p87_c1",
+            "cbic_faqs_v1_p87_c1",
+            "cgst_act_2017_p42_c0",
+            "gst_rate_schedule_goods_p186_c1",
+            "gst_overview_2019_p27_c0"
+          ],
+          "passed": true
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "cgst_act_2017_p42_c0",
+            "cbic_faqs_v1_p87_c1",
+            "cbic_faqs_v1_p87_c0",
+            "cbic_faqs_v2_p87_c1",
+            "cbic_faqs_v2_p89_c1"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "gst_overview_2019_p27_c0",
+            "cgst_act_2017_p43_c0",
+            "cgst_act_2017_p42_c0",
+            "cgst_act_2017_p43_c1",
+            "cbic_faqs_v1_p87_c1"
+          ],
+          "passed": true
+        }
+      }
+    },
+    {
+      "query_id": "q14",
+      "query": "What are the conditions for claiming input tax credit?",
+      "gold_chunk_ids": [
+        "cgst_act_2017_p39_c0"
+      ],
+      "category": "itc",
+      "phrasing_style": "direct",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "cgst_rules_2017_part_a_p34_c0",
+            "cgst_act_2017_p39_c0",
+            "cgst_act_2017_p73_c1",
+            "cgst_act_2017_p45_c0",
+            "cbic_faqs_v2_p91_c1"
+          ],
+          "passed": true
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "cgst_rules_2017_part_a_p34_c0",
+            "cbic_faqs_v2_p213_c0",
+            "cbic_faqs_v1_p213_c0",
+            "cbic_faqs_v2_p84_c1",
+            "cgst_act_2017_p47_c0"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "cgst_rules_2017_part_a_p34_c0",
+            "cgst_act_2017_p39_c0",
+            "cgst_rules_2017_part_a_p38_c1",
+            "cgst_rules_2017_part_a_p36_c1",
+            "cbic_faqs_v2_p213_c0"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "cgst_rules_2017_part_a_p34_c0",
+            "cgst_act_2017_p39_c0",
+            "cgst_act_2017_p45_c0",
+            "sectoral_faq_cat22_q30",
+            "cbic_faqs_v2_p213_c0"
+          ],
+          "passed": true
+        }
+      }
+    },
+    {
+      "query_id": "q15",
+      "query": "I'm a freelance designer in Bangalore providing services to clients in Mumbai. Do I have to register for GST even if I earn under 20 lakhs?",
+      "gold_chunk_ids": [
+        "cgst_act_2017_p51_c2",
+        "sectoral_faq_cat18_q9"
+      ],
+      "category": "registration",
+      "phrasing_style": "scenario",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat18_q10",
+            "sectoral_faq_cat18_q7",
+            "sectoral_faq_cat18_q11",
+            "sectoral_faq_cat17_q6",
+            "sectoral_faq_cat18_q2"
+          ],
+          "passed": false
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat18_q10",
+            "sectoral_faq_cat18_q11",
+            "sectoral_faq_cat22_q83",
+            "sectoral_faq_cat9_q4",
+            "sectoral_faq_cat18_q9"
+          ],
+          "passed": true
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "sectoral_faq_cat18_q10",
+            "sectoral_faq_cat18_q11",
+            "sectoral_faq_cat18_q9",
+            "sectoral_faq_cat18_q4",
+            "sectoral_faq_cat18_q12"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "sectoral_faq_cat18_q10",
+            "sectoral_faq_cat18_q4",
+            "sectoral_faq_cat18_q7",
+            "sectoral_faq_cat18_q2",
+            "sectoral_faq_cat17_q6"
+          ],
+          "passed": false
+        }
+      }
+    },
+    {
+      "query_id": "q16",
+      "query": "What happens if I'm a business that receives goods transport agency (GTA) services — who pays GST?",
+      "gold_chunk_ids": [
+        "sectoral_faq_cat9_q21",
+        "sectoral_faq_cat18_q13"
+      ],
+      "category": "rcm",
+      "phrasing_style": "direct",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q24",
+            "sectoral_faq_cat18_q13",
+            "sectoral_faq_cat9_q21",
+            "sectoral_faq_cat17_q5",
+            "sectoral_faq_cat15_q9"
+          ],
+          "passed": true
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "services_under_rcm_p1_c2",
+            "services_under_rcm_p1_c1",
+            "gst_rate_schedule_services_p1_c1",
+            "sectoral_faq_cat9_q24",
+            "sectoral_faq_cat15_q9"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q24",
+            "sectoral_faq_cat18_q13",
+            "gst_rate_schedule_services_p1_c1",
+            "sectoral_faq_cat15_q9",
+            "sectoral_faq_cat17_q5"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "sectoral_faq_cat18_q13",
+            "sectoral_faq_cat9_q24",
+            "sectoral_faq_cat15_q9",
+            "cbic_faqs_v2_p64_c1",
+            "cbic_faqs_v1_p64_c1"
+          ],
+          "passed": true
+        }
+      }
+    },
+    {
+      "query_id": "q17",
+      "query": "When do I need to generate an e-way bill?",
+      "gold_chunk_ids": [
+        "cgst_rules_2017_part_a_p138_c0"
+      ],
+      "category": "eway_bill",
+      "phrasing_style": "casual",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "gst_overview_2019_p22_c0",
+            "cgst_rules_2017_part_b_p372_c0",
+            "cgst_rules_2017_part_b_p377_c1",
+            "cgst_rules_2017_part_a_p150_c4",
+            "cgst_rules_2017_part_a_p146_c2"
+          ],
+          "passed": false
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "cgst_rules_2017_part_a_p139_c2",
+            "cgst_rules_2017_part_a_p149_c2",
+            "gst_overview_2019_p22_c0",
+            "cgst_rules_2017_part_a_p147_c3",
+            "cgst_rules_2017_part_b_p372_c0"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "gst_overview_2019_p22_c0",
+            "cgst_rules_2017_part_b_p372_c0",
+            "cgst_rules_2017_part_a_p149_c2",
+            "cgst_rules_2017_part_a_p150_c4",
+            "cgst_rules_2017_part_a_p140_c4"
+          ],
+          "passed": false
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "cgst_rules_2017_part_a_p150_c4",
+            "cgst_rules_2017_part_b_p370_c0",
+            "cgst_rules_2017_part_a_p146_c5",
+            "sectoral_faq_cat19_q3",
+            "cgst_rules_2017_part_a_p147_c5"
+          ],
+          "passed": false
+        }
+      }
+    },
+    {
+      "query_id": "q18",
+      "query": "What is export of services under GST?",
+      "gold_chunk_ids": [
+        "igst_act_2017_p5_c3"
+      ],
+      "category": "other",
+      "phrasing_style": "direct",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p15_c0",
+            "igst_act_2017_p5_c3",
+            "cbic_faqs_v1_p15_c1",
+            "sectoral_faq_cat22_q54",
+            "cbic_faqs_v1_p15_c0"
+          ],
+          "passed": true
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p53_c1",
+            "cbic_faqs_v1_p53_c1",
+            "sectoral_faq_cat7a_q3",
+            "cgst_rules_2017_part_a_p113_c0",
+            "cbic_faqs_v1_p184_c1"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "cbic_faqs_v1_p15_c1",
+            "sectoral_faq_cat22_q68",
+            "cbic_faqs_v2_p15_c0",
+            "cbic_faqs_v2_p53_c1",
+            "igst_act_2017_p5_c3"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "igst_act_2017_p5_c3",
+            "cbic_faqs_v2_p53_c1",
+            "cbic_faqs_v1_p53_c1",
+            "cbic_faqs_v2_p15_c0",
+            "sectoral_faq_cat22_q68"
+          ],
+          "passed": true
+        }
+      }
+    },
+    {
+      "query_id": "q19",
+      "query": "If I sell goods to a customer outside India, is that taxed under GST?",
+      "gold_chunk_ids": [
+        "igst_act_2017_p5_c2"
+      ],
+      "category": "other",
+      "phrasing_style": "casual",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat14_q9",
+            "sectoral_faq_cat17_q19",
+            "sectoral_faq_cat22_q54",
+            "sectoral_faq_cat18_q7",
+            "sectoral_faq_cat17_q4"
+          ],
+          "passed": false
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat17_q19",
+            "igst_act_2017_p10_c1",
+            "gst_rate_schedule_services_p5_c0",
+            "sectoral_faq_cat22_q31",
+            "cbic_faqs_v2_p9_c1"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "sectoral_faq_cat17_q19",
+            "sectoral_faq_cat22_q54",
+            "cgst_rules_2017_part_a_p17_c1",
+            "sectoral_faq_cat14_q9",
+            "igst_act_2017_p10_c1"
+          ],
+          "passed": false
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p9_c1",
+            "sectoral_faq_cat14_q9",
+            "sectoral_faq_cat17_q19",
+            "sectoral_faq_cat22_q54",
+            "sectoral_faq_cat20_q3"
+          ],
+          "passed": false
+        }
+      }
+    },
+    {
+      "query_id": "q20",
+      "query": "How often do I need to file GSTR-3B?",
+      "gold_chunk_ids": [
+        "gst_overview_2019_p19_c0"
+      ],
+      "category": "returns",
+      "phrasing_style": "casual",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "gst_overview_2019_p19_c0",
+            "cgst_rules_2017_part_b_p139_c0",
+            "cgst_rules_2017_part_b_p139_c2",
+            "cgst_rules_2017_part_b_p188_c1",
+            "sectoral_faq_cat14_q2"
+          ],
+          "passed": true
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p103_c1",
+            "cbic_faqs_v1_p105_c0",
+            "cbic_faqs_v2_p105_c0",
+            "cbic_faqs_v2_p103_c0",
+            "cbic_faqs_v1_p103_c0"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "gst_overview_2019_p19_c0",
+            "cbic_faqs_v1_p103_c0",
+            "sectoral_faq_cat14_q2",
+            "cbic_faqs_v2_p103_c0",
+            "cbic_faqs_v1_p100_c0"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "gst_overview_2019_p19_c0",
+            "cgst_rules_2017_part_b_p213_c0",
+            "cbic_faqs_v1_p103_c1",
+            "cgst_rules_2017_part_b_p139_c0",
+            "cgst_rules_2017_part_b_p188_c1"
+          ],
+          "passed": true
+        }
+      }
+    },
+    {
+      "query_id": "q21",
+      "query": "What is the annual return in GST and who has to file it?",
+      "gold_chunk_ids": [
+        "cgst_rules_2017_part_a_p84_c3"
+      ],
+      "category": "returns",
+      "phrasing_style": "direct",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p104_c1",
+            "cbic_faqs_v1_p104_c1",
+            "cbic_faqs_v2_p99_c0",
+            "cbic_faqs_v1_p99_c0",
+            "cgst_rules_2017_part_b_p154_c0"
+          ],
+          "passed": false
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "cbic_faqs_v1_p104_c1",
+            "cbic_faqs_v2_p104_c1",
+            "gst_overview_2019_p14_c1",
+            "cbic_faqs_v2_p77_c1",
+            "cbic_faqs_v1_p77_c1"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p104_c1",
+            "cbic_faqs_v1_p104_c1",
+            "cbic_faqs_v1_p99_c0",
+            "cbic_faqs_v2_p99_c0",
+            "cbic_faqs_v1_p103_c1"
+          ],
+          "passed": false
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p104_c1",
+            "cbic_faqs_v1_p104_c1",
+            "cbic_faqs_v1_p99_c0",
+            "cbic_faqs_v2_p99_c0",
+            "cbic_faqs_v1_p103_c1"
+          ],
+          "passed": false
+        }
+      }
+    },
+    {
+      "query_id": "q22",
+      "query": "If I'm a trader with 1 crore turnover, when do I file GSTR-1?",
+      "gold_chunk_ids": [
+        "gst_overview_2019_p19_c0"
+      ],
+      "category": "returns",
+      "phrasing_style": "scenario",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "cgst_rules_2017_part_b_p206_c0",
+            "cgst_rules_2017_part_b_p213_c3",
+            "cgst_rules_2017_part_b_p200_c0",
+            "cgst_rules_2017_part_a_p85_c0",
+            "cgst_rules_2017_part_a_p84_c4"
+          ],
+          "passed": false
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p103_c0",
+            "cbic_faqs_v1_p103_c0",
+            "gst_overview_2019_p19_c0",
+            "sectoral_faq_cat18_q7",
+            "cbic_faqs_v1_p103_c1"
+          ],
+          "passed": true
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "cbic_faqs_v1_p103_c0",
+            "gst_overview_2019_p19_c0",
+            "cbic_faqs_v2_p103_c0",
+            "sectoral_faq_cat18_q7",
+            "cbic_faqs_v1_p103_c1"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "gst_overview_2019_p19_c0",
+            "cbic_faqs_v1_p103_c0",
+            "cbic_faqs_v2_p103_c0",
+            "cbic_faqs_v1_p103_c1",
+            "cgst_rules_2017_part_a_p85_c0"
+          ],
+          "passed": true
+        }
+      }
+    },
+    {
+      "query_id": "q23",
+      "query": "How does TDS work under GST and what is the rate?",
+      "gold_chunk_ids": [
+        "cbic_faqs_v1_p72_c0"
+      ],
+      "category": "other",
+      "phrasing_style": "direct",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "cbic_faqs_v1_p71_c1",
+            "cbic_faqs_v2_p71_c1",
+            "cbic_faqs_v2_p72_c0",
+            "cbic_faqs_v1_p72_c0",
+            "cgst_rules_2017_part_b_p133_c0"
+          ],
+          "passed": true
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p103_c2",
+            "cbic_faqs_v1_p103_c2",
+            "cbic_faqs_v2_p72_c0",
+            "cbic_faqs_v1_p72_c0",
+            "sectoral_faq_cat19_q12"
+          ],
+          "passed": true
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p72_c0",
+            "cbic_faqs_v1_p72_c0",
+            "cbic_faqs_v2_p72_c1",
+            "cbic_faqs_v1_p72_c1",
+            "cgst_rules_2017_part_b_p133_c0"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "sectoral_faq_cat15_q4",
+            "cbic_faqs_v2_p64_c0",
+            "cbic_faqs_v2_p71_c1",
+            "cbic_faqs_v1_p71_c1",
+            "cbic_faqs_v2_p72_c0"
+          ],
+          "passed": false
+        }
+      }
+    },
+    {
+      "query_id": "q24",
+      "query": "What is the GST rate on biscuits?",
+      "gold_chunk_ids": [],
+      "category": "rates",
+      "phrasing_style": "expected_failure",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "gst_rate_schedule_goods_p22_c0",
+            "gst_rate_schedule_goods_p23_c0",
+            "gst_rate_schedule_goods_p20_c0",
+            "gst_rate_schedule_goods_p21_c0",
+            "gst_rate_schedule_goods_p131_c0"
+          ],
+          "passed": false
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "gst_rate_schedule_goods_p213_c0",
+            "sectoral_faq_cat19_q12",
+            "cbic_faqs_v1_p58_c1",
+            "cbic_faqs_v2_p58_c1",
+            "sectoral_faq_cat17_q11"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "gst_rate_schedule_goods_p22_c0",
+            "gst_rate_schedule_goods_p213_c0",
+            "gst_rate_schedule_goods_p23_c0",
+            "sectoral_faq_cat19_q12",
+            "gst_rate_schedule_goods_p20_c0"
+          ],
+          "passed": false
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "gst_rate_schedule_goods_p33_c0",
+            "gst_rate_schedule_goods_p22_c0",
+            "gst_rate_schedule_goods_p157_c0",
+            "gst_rate_schedule_goods_p49_c0",
+            "gst_rate_schedule_goods_p213_c0"
+          ],
+          "passed": false
+        }
+      }
+    },
+    {
+      "query_id": "q25",
+      "query": "What is the GST rate on legal services provided to a partnership firm?",
+      "gold_chunk_ids": [],
+      "category": "rates",
+      "phrasing_style": "expected_failure",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "gst_rate_schedule_services_p7_c0",
+            "services_under_rcm_p2_c0",
+            "sectoral_faq_cat19_q12",
+            "sectoral_faq_cat22_q54",
+            "gst_rate_schedule_services_p4_c1"
+          ],
+          "passed": false
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "gst_rate_schedule_services_p7_c0",
+            "cgst_act_2017_p126_c0",
+            "services_under_rcm_p2_c0",
+            "sectoral_faq_cat15_q15",
+            "services_under_rcm_p3_c0"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "gst_rate_schedule_services_p7_c0",
+            "services_under_rcm_p2_c0",
+            "sectoral_faq_cat20_q4",
+            "services_under_rcm_p3_c0",
+            "sectoral_faq_cat19_q12"
+          ],
+          "passed": false
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "services_under_rcm_p3_c0",
+            "services_under_rcm_p2_c0",
+            "sectoral_faq_cat19_q12",
+            "gst_rate_schedule_services_p7_c0",
+            "sectoral_faq_cat20_q4"
+          ],
+          "passed": false
+        }
+      }
+    },
+    {
+      "query_id": "q26",
+      "query": "What is the HSN code for live horses?",
+      "gold_chunk_ids": [],
+      "category": "rates",
+      "phrasing_style": "expected_failure",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "cgst_rules_2017_part_b_p396_c1",
+            "gst_rate_schedule_goods_p1_c1",
+            "cgst_rules_2017_part_b_p78_c0",
+            "cgst_rules_2017_part_b_p370_c0",
+            "cgst_rules_2017_part_b_p115_c2"
+          ],
+          "passed": false
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "gst_rate_schedule_goods_p1_c1",
+            "cgst_rules_2017_part_b_p115_c2",
+            "cbic_faqs_v2_p14_c2",
+            "cgst_rules_2017_part_b_p370_c0",
+            "cbic_faqs_v1_p14_c2"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "gst_rate_schedule_goods_p1_c1",
+            "cgst_rules_2017_part_b_p115_c2",
+            "cgst_rules_2017_part_b_p370_c0",
+            "cgst_rules_2017_part_b_p396_c1",
+            "cbic_faqs_v2_p14_c2"
+          ],
+          "passed": false
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "cgst_rules_2017_part_b_p396_c1",
+            "gst_rate_schedule_goods_p1_c1",
+            "cgst_rules_2017_part_b_p188_c0",
+            "cbic_faqs_v2_p14_c2",
+            "cgst_rules_2017_part_b_p78_c0"
+          ],
+          "passed": false
+        }
+      }
+    },
+    {
+      "query_id": "q27",
+      "query": "What does notification 13/2017 say about reverse charge for advocates?",
+      "gold_chunk_ids": [],
+      "category": "rcm",
+      "phrasing_style": "expected_failure",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q12",
+            "services_under_rcm_p1_c0",
+            "cbic_faqs_v1_p23_c1",
+            "cbic_faqs_v2_p23_c1",
+            "sectoral_faq_cat9_q13"
+          ],
+          "passed": false
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "gst_overview_2019_p16_c1",
+            "cbic_faqs_v1_p84_c0",
+            "cbic_faqs_v2_p84_c0",
+            "services_under_rcm_p2_c0",
+            "gst_overview_2019_p16_c0"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "gst_overview_2019_p16_c1",
+            "cbic_faqs_v2_p23_c1",
+            "cbic_faqs_v1_p23_c1",
+            "sectoral_faq_cat9_q21",
+            "gst_overview_2019_p16_c0"
+          ],
+          "passed": false
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "sectoral_faq_cat9_q21",
+            "cgst_act_2017_p148_c0",
+            "sectoral_faq_cat9_q13",
+            "services_under_rcm_p2_c0",
+            "igst_act_2017_p8_c2"
+          ],
+          "passed": false
+        }
+      }
+    },
+    {
+      "query_id": "q28",
+      "query": "What forms do I file under GST for a refund of unutilized ITC and the procedure?",
+      "gold_chunk_ids": [],
+      "category": "other",
+      "phrasing_style": "expected_failure",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p117_c0",
+            "cbic_faqs_v1_p117_c0",
+            "cbic_faqs_v2_p117_c1",
+            "cbic_faqs_v1_p117_c1",
+            "cgst_rules_2017_part_a_p85_c2"
+          ],
+          "passed": false
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat15_q7",
+            "cbic_faqs_v1_p46_c0",
+            "cgst_rules_2017_part_a_p87_c2",
+            "cbic_faqs_v1_p117_c0",
+            "cbic_faqs_v2_p117_c0"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p117_c0",
+            "cbic_faqs_v1_p117_c0",
+            "cbic_faqs_v2_p46_c0",
+            "sectoral_faq_cat15_q7",
+            "cbic_faqs_v1_p46_c0"
+          ],
+          "passed": false
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "cbic_faqs_v2_p46_c0",
+            "cgst_rules_2017_part_a_p87_c2",
+            "cbic_faqs_v2_p117_c1",
+            "cbic_faqs_v1_p117_c1",
+            "cbic_faqs_v1_p46_c0"
+          ],
+          "passed": false
+        }
+      }
+    },
+    {
+      "query_id": "q29",
+      "query": "What is the difference between exempt supply, nil-rated supply, and zero-rated supply?",
+      "gold_chunk_ids": [
+        "cgst_act_2017_p10_c0"
+      ],
+      "category": "other",
+      "phrasing_style": "paraphrase",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "cgst_rules_2017_part_b_p181_c1",
+            "igst_act_2017_p17_c1",
+            "cgst_rules_2017_part_a_p101_c0",
+            "cgst_rules_2017_part_b_p216_c2",
+            "cbic_faqs_v2_p53_c1"
+          ],
+          "passed": false
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "cgst_act_2017_p41_c1",
+            "cbic_faqs_v1_p45_c1",
+            "cbic_faqs_v2_p45_c1",
+            "cgst_rules_2017_part_a_p101_c1",
+            "cgst_rules_2017_part_a_p31_c2"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "cgst_act_2017_p41_c1",
+            "cgst_rules_2017_part_a_p101_c0",
+            "cgst_rules_2017_part_b_p152_c2",
+            "cbic_faqs_v2_p89_c1",
+            "cgst_rules_2017_part_b_p181_c1"
+          ],
+          "passed": false
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "cgst_rules_2017_part_b_p181_c1",
+            "cbic_faqs_v2_p53_c1",
+            "cbic_faqs_v1_p53_c1",
+            "cgst_rules_2017_part_a_p101_c0",
+            "cbic_faqs_v2_p89_c1"
+          ],
+          "passed": false
+        }
+      }
+    },
+    {
+      "query_id": "q30",
+      "query": "I'm a kirana shop owner in Delhi with 18 lakh turnover. Should I register for GST and what about charging customers?",
+      "gold_chunk_ids": [
+        "sectoral_faq_cat18_q4",
+        "sectoral_faq_cat18_q5"
+      ],
+      "category": "registration",
+      "phrasing_style": "scenario",
+      "retrieved": {
+        "vector_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat18_q4",
+            "sectoral_faq_cat18_q10",
+            "sectoral_faq_cat18_q11",
+            "sectoral_faq_cat18_q12",
+            "sectoral_faq_cat18_q7"
+          ],
+          "passed": true
+        },
+        "bm25_only": {
+          "chunk_ids": [
+            "sectoral_faq_cat18_q10",
+            "sectoral_faq_cat18_q7",
+            "cbic_faqs_v1_p155_c1",
+            "cbic_faqs_v2_p155_c1",
+            "gst_rate_schedule_services_p10_c2"
+          ],
+          "passed": false
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "sectoral_faq_cat18_q10",
+            "sectoral_faq_cat18_q7",
+            "sectoral_faq_cat18_q4",
+            "sectoral_faq_cat18_q11",
+            "cbic_faqs_v1_p155_c1"
+          ],
+          "passed": true
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "sectoral_faq_cat18_q4",
+            "sectoral_faq_cat18_q7",
+            "sectoral_faq_cat18_q5",
+            "cbic_faqs_v2_p215_c1",
+            "cbic_faqs_v1_p215_c1"
+          ],
+          "passed": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+rank_bm25
+numpy
+pypdf
+sentence-transformers
+qdrant-client
+beautifulsoup4
+langchain-text-splitters
+langchain-google-genai
+python-dotenv
+streamlit
+torchvision

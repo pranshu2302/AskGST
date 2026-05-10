@@ -1,0 +1,242 @@
+[
+  {
+    "id": "q1",
+    "query": "Can I claim ITC on rent-a-cab services?",
+    "gold_chunk_ids": ["sectoral_faq_cat15_q16", "sectoral_faq_cat21_q3"],
+    "category": "itc",
+    "phrasing_style": "direct",
+    "notes": "Both sectoral FAQs say ITC for rent-a-cab is not available; cgst_act_2017_p43_c3 also lists it as blocked under Section 17(5). Two near-duplicate FAQ chunks should both be retrievable."
+  },
+  {
+    "id": "q2",
+    "query": "I just started a small consultancy. My yearly income is about 12 lakhs. Do I need GST?",
+    "gold_chunk_ids": ["gst_overview_2019_p12_c0", "cbic_faqs_v1_p29_c1"],
+    "category": "registration",
+    "phrasing_style": "scenario",
+    "notes": "Threshold question framed as a scenario; under 20 lakhs for services is the answer. Overview chunk is cleanest, FAQ chunk also explicit."
+  },
+  {
+    "id": "q3",
+    "query": "What are the GST rates under the composition scheme for traders, manufacturers, and restaurants?",
+    "gold_chunk_ids": ["cbic_faqs_v1_p24_c1", "cbic_faqs_v1_p16_c0"],
+    "category": "composition",
+    "phrasing_style": "direct",
+    "notes": "Composition rate question. cbic_faqs_v1_p24_c1 contains both Q13 (threshold) and Q14 (rates: 0.5% trader, 1% manufacturer, 2.5% restaurant). cbic_faqs_v1_p16_c0 also covers the rate floor language. Replaces an earlier registration-threshold paraphrase (the original q3) to bring composition coverage to 2 per reviewer feedback."
+  },
+  {
+    "id": "q4",
+    "query": "What is the threshold for opting into the composition scheme?",
+    "gold_chunk_ids": ["cbic_faqs_v1_p24_c1", "cbic_faqs_v1_p14_c1"],
+    "category": "composition",
+    "phrasing_style": "direct",
+    "notes": "Q13 of CBIC FAQs is a direct match (Rs. 50 Lakhs threshold). cbic_faqs_v1_p14_c1 also explicitly mentions the 50 Lakh composition threshold ('a person whose aggregate turnover ... is less than Rs.50 Lakhs can opt for a simplified composition scheme') — verified, not noise. Note: this is the older threshold from the FAQ doc; current law is 1.5 Cr."
+  },
+  {
+    "id": "q5",
+    "query": "What does reverse charge mean under GST?",
+    "gold_chunk_ids": ["sectoral_faq_cat9_q1", "sectoral_faq_cat9_q2"],
+    "category": "rcm",
+    "phrasing_style": "direct",
+    "notes": "Definitional question, sectoral FAQ cat9_q1 is verbatim definition."
+  },
+  {
+    "id": "q6",
+    "query": "Are legal services from an advocate firm under reverse charge?",
+    "gold_chunk_ids": ["sectoral_faq_cat9_q12"],
+    "category": "rcm",
+    "phrasing_style": "direct",
+    "notes": "Single-word answer in FAQ. services_under_rcm_p2_c1 also lists this; testing whether short FAQs surface."
+  },
+  {
+    "id": "q7",
+    "query": "If I'm paying GST on reverse charge, can I claim it as input tax credit?",
+    "gold_chunk_ids": ["sectoral_faq_cat9_q7"],
+    "category": "rcm",
+    "phrasing_style": "casual",
+    "notes": "FAQ explicitly says yes — RCM tax is included in input tax definition."
+  },
+  {
+    "id": "q8",
+    "query": "Does the 20 lakh threshold apply to me if I have to pay tax under reverse charge?",
+    "gold_chunk_ids": ["sectoral_faq_cat9_q4"],
+    "category": "rcm",
+    "phrasing_style": "paraphrase",
+    "notes": "Tests whether retrieval connects 'threshold' phrasing to the FAQ that says compulsory registration applies regardless of turnover."
+  },
+  {
+    "id": "q9",
+    "query": "I run a small shop with 15 lakh turnover and want to start selling on Amazon. Do I need GST registration?",
+    "gold_chunk_ids": ["sectoral_faq_cat18_q7", "sectoral_faq_cat18_q1"],
+    "category": "registration",
+    "phrasing_style": "scenario",
+    "notes": "Real merchant scenario; cat18_q7 is explicit on TCS-collecting e-commerce operators triggering compulsory registration."
+  },
+  {
+    "id": "q10",
+    "query": "What is aggregate turnover and what does it include?",
+    "gold_chunk_ids": ["cbic_faqs_v1_p30_c0"],
+    "category": "registration",
+    "phrasing_style": "direct",
+    "notes": "FAQ explicitly defines aggregate turnover under section 2(6)."
+  },
+  {
+    "id": "q11",
+    "query": "Who has to compulsorily register under GST regardless of turnover?",
+    "gold_chunk_ids": ["cgst_act_2017_p51_c2"],
+    "category": "registration",
+    "phrasing_style": "direct",
+    "notes": "Section 24 enumerates compulsory registration cases. Tests whether dense statutory text retrieves on natural query."
+  },
+  {
+    "id": "q12",
+    "query": "What's the time of supply for goods when tax is paid under reverse charge?",
+    "gold_chunk_ids": ["sectoral_faq_cat9_q5"],
+    "category": "rcm",
+    "phrasing_style": "direct",
+    "notes": "Specific question with a clean FAQ answer (earliest of receipt/payment/30 days)."
+  },
+  {
+    "id": "q13",
+    "query": "Can I take input tax credit on motor vehicles for my business?",
+    "gold_chunk_ids": ["cgst_act_2017_p42_c0", "cgst_act_2017_p42_c1"],
+    "category": "itc",
+    "phrasing_style": "casual",
+    "notes": "Section 17(5) blocked credits — motor vehicles with seating <= 13 are blocked except for specific uses."
+  },
+  {
+    "id": "q14",
+    "query": "What are the conditions for claiming input tax credit?",
+    "gold_chunk_ids": ["cgst_act_2017_p39_c0"],
+    "category": "itc",
+    "phrasing_style": "direct",
+    "notes": "Section 16 — Eligibility and conditions for taking ITC. Foundational chunk."
+  },
+  {
+    "id": "q15",
+    "query": "I'm a freelance designer in Bangalore providing services to clients in Mumbai. Do I have to register for GST even if I earn under 20 lakhs?",
+    "gold_chunk_ids": ["cgst_act_2017_p51_c2", "sectoral_faq_cat18_q9"],
+    "category": "registration",
+    "phrasing_style": "scenario",
+    "notes": "Inter-state supply scenario. Sec 24(i) makes inter-state taxable supply compulsory registration. Tests scenario reasoning."
+  },
+  {
+    "id": "q16",
+    "query": "What happens if I'm a business that receives goods transport agency (GTA) services — who pays GST?",
+    "gold_chunk_ids": ["sectoral_faq_cat9_q21", "sectoral_faq_cat18_q13"],
+    "category": "rcm",
+    "phrasing_style": "direct",
+    "notes": "GTA reverse charge — recipient pays. Two sectoral FAQs both relevant."
+  },
+  {
+    "id": "q17",
+    "query": "When do I need to generate an e-way bill?",
+    "gold_chunk_ids": ["cgst_rules_2017_part_a_p138_c0"],
+    "category": "eway_bill",
+    "phrasing_style": "casual",
+    "notes": "Rule 138 — consignment value exceeding fifty thousand rupees triggers e-way bill."
+  },
+  {
+    "id": "q18",
+    "query": "What is export of services under GST?",
+    "gold_chunk_ids": ["igst_act_2017_p5_c3"],
+    "category": "other",
+    "phrasing_style": "direct",
+    "notes": "IGST Act Section 2(6) — clean definition with all five conditions."
+  },
+  {
+    "id": "q19",
+    "query": "If I sell goods to a customer outside India, is that taxed under GST?",
+    "gold_chunk_ids": ["igst_act_2017_p5_c2"],
+    "category": "other",
+    "phrasing_style": "casual",
+    "notes": "Goods-export question. IGST Act Section 2(5) defines 'export of goods' as taking goods out of India to a place outside India — this definition lives in p5_c2 (the same chunk that ends with the start of the services-export definition). Tests whether casual phrasing retrieves the statutory goods-export definition rather than the services one."
+  },
+  {
+    "id": "q20",
+    "query": "How often do I need to file GSTR-3B?",
+    "gold_chunk_ids": ["gst_overview_2019_p19_c0"],
+    "category": "returns",
+    "phrasing_style": "casual",
+    "notes": "Overview chunk explicitly says monthly. Tests whether retrieval handles 'how often' phrasing for a frequency answer."
+  },
+  {
+    "id": "q21",
+    "query": "What is the annual return in GST and who has to file it?",
+    "gold_chunk_ids": ["cgst_rules_2017_part_a_p84_c3"],
+    "category": "returns",
+    "phrasing_style": "direct",
+    "notes": "Rule 80 — GSTR-9 filing requirement and exclusions (TDS deductors, casual taxable persons etc.)."
+  },
+  {
+    "id": "q22",
+    "query": "If I'm a trader with 1 crore turnover, when do I file GSTR-1?",
+    "gold_chunk_ids": ["gst_overview_2019_p19_c0"],
+    "category": "returns",
+    "phrasing_style": "scenario",
+    "notes": "Below 1.5 Cr → quarterly GSTR-1 per overview chunk. Tests whether numeric scenario retrieves frequency rule."
+  },
+  {
+    "id": "q23",
+    "query": "How does TDS work under GST and what is the rate?",
+    "gold_chunk_ids": ["cbic_faqs_v1_p72_c0"],
+    "category": "other",
+    "phrasing_style": "direct",
+    "notes": "FAQ Q23-Q25 covers 1% TDS deduction by government authorities and accounting."
+  },
+  {
+    "id": "q24",
+    "query": "What is the GST rate on biscuits?",
+    "gold_chunk_ids": [],
+    "category": "rates",
+    "phrasing_style": "expected_failure",
+    "notes": "Rate schedule has the answer but layout is mangled in extraction (column-fragmented chunks like gst_rate_schedule_goods_p34_c0). Expected to fail or return weak matches. Failure here validates that layout-broken sources show up as a real eval problem."
+  },
+  {
+    "id": "q25",
+    "query": "What is the GST rate on legal services provided to a partnership firm?",
+    "gold_chunk_ids": [],
+    "category": "rates",
+    "phrasing_style": "expected_failure",
+    "notes": "Rate schedule services chunk has fragments but no clean Q&A. Expected to fail — sectoral_faq_cat9_q12 may surface but only answers the RCM angle, not the rate."
+  },
+  {
+    "id": "q26",
+    "query": "What is the HSN code for live horses?",
+    "gold_chunk_ids": [],
+    "category": "rates",
+    "phrasing_style": "expected_failure",
+    "notes": "HSN-specific lookup against fragmented rate schedule. gst_rate_schedule_goods_p1_c1 contains the data but in column-broken form. Expected partial/failed retrieval."
+  },
+  {
+    "id": "q27",
+    "query": "What does notification 13/2017 say about reverse charge for advocates?",
+    "gold_chunk_ids": [],
+    "category": "rcm",
+    "phrasing_style": "expected_failure",
+    "notes": "Day 1 skipped notifications/circulars. sectoral_faq_cat9_q21 mentions the notification number but isn't the notification itself. Expected to fail clean retrieval."
+  },
+  {
+    "id": "q28",
+    "query": "What forms do I file under GST for a refund of unutilized ITC and the procedure?",
+    "gold_chunk_ids": [],
+    "category": "other",
+    "phrasing_style": "expected_failure",
+    "notes": "Refund forms are buried in cgst_rules_2017_part_b which is forms-heavy and noisy. Expected weak or off-target retrieval; useful for showing real failure modes."
+  },
+  {
+    "id": "q29",
+    "query": "What is the difference between exempt supply, nil-rated supply, and zero-rated supply?",
+    "gold_chunk_ids": ["cgst_act_2017_p10_c0"],
+    "category": "other",
+    "phrasing_style": "paraphrase",
+    "notes": "Comparative question — definitions are scattered (exempt in CGST Act, zero-rated in IGST Act). Single gold is the exempt-supply definition; retrieval may need to pull multiple."
+  },
+  {
+    "id": "q30",
+    "query": "I'm a kirana shop owner in Delhi with 18 lakh turnover. Should I register for GST and what about charging customers?",
+    "gold_chunk_ids": ["sectoral_faq_cat18_q4", "sectoral_faq_cat18_q5"],
+    "category": "registration",
+    "phrasing_style": "scenario",
+    "notes": "Realistic small-merchant scenario. cat18_q4 and q5 are about exactly this case (kirana / kariyanawala under threshold)."
+  }
+]
